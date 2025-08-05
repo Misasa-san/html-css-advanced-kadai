@@ -1,0 +1,156 @@
+/* PC、スマホ共通スタイル */
+body {
+  font-family: "Source Sans Pro", "Hiragino Kaku Gothic ProN", Meiryo, Arial,
+    sans-serif;
+}
+
+p {
+  font-size: 15px;
+}
+
+#main-visual>img {
+  width: 100%;
+}
+
+/*================
+PC用のスタイル 
+=================*/
+@media screen and (min-width: 768px) {
+  /* 横幅設定 */
+  body {
+    max-width: 1080px;
+    min-width: 960px;
+    margin: 0 auto 0 auto;
+  }
+
+  /* ヘッダー */
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* ナビゲーションのレイアウト */
+  #nav-pc {
+    text-align: right;
+    font-size: 14px;
+    padding-top: 15px;
+  }
+
+  /* ナビゲーションのリンクの装飾設定 */
+  #nav-pc>a {
+    text-decoration: none;
+    margin-left: 20px;
+  }
+
+  #nav-pc>a:link {
+    color: #0d0d0d;
+  }
+
+  #nav-pc>a:visited {
+    color: #0d0d0d;
+  }
+
+  #nav-pc>a:hover {
+    color: #0d0d0d;
+    text-decoration: underline;
+  }
+
+  #nav-pc>a:active {
+    color: #0d0d0d;
+  }
+
+  /* PCの画面幅の場合にSPのナビゲーションを非表示にする */
+  #menu-sp { /* [cite: 7] */
+    display: none; /* [cite: 7] */
+  }
+  #nav-sp { /* [cite: 7] */
+    display: none; /* [cite: 7] */
+  }
+}
+
+/*================
+SP用のスタイル
+=================*/
+@media screen and (max-width: 767px) { /*  */
+  /* 横幅設定 */
+  body { /* [cite: 5] */
+    min-width: 375px; /* [cite: 5] */
+    margin: 0; /* [cite: 5] */
+  }
+
+  /* PCのナビゲーションを非表示に */
+  #nav-pc { /* [cite: 5] */
+    display: none; /* [cite: 5] */
+  }
+
+  /* ハンバーガーメニュー */
+  #menu-sp { /* [cite: 5] */
+    float: right; /* [cite: 5] */
+    padding: 0; /* [cite: 5] */
+  }
+
+  /* スマホ用ナビゲーション */
+  #nav-sp { /* [cite: 5] */
+    background-color: #ce933e; /* [cite: 5] */
+    position: absolute; /* [cite: 5] */
+    left: 0; /* [cite: 5] */
+    top: 0; /* [cite: 5] */
+    height: 100%; /* [cite: 5] */
+    width: 100%; /* [cite: 5] */
+    display: none; /* [cite: 5] */
+    z-index: 100; /* [cite: 5] */
+  }
+
+  #nav-sp ul { /* [cite: 5] */
+    padding-left: 0; /* [cite: 5] */
+  }
+
+  #nav-sp li { /* [cite: 5] */
+    list-style: none; /* [cite: 5] */
+  }
+
+  /* xボタン */
+  #close { /* [cite: 5] */
+    position: absolute; /* [cite: 5] */
+    top: 20px; /* [cite: 5] */
+    right: 20px; /* [cite: 5] */
+  }
+
+  /* ナビゲーションメニュー用ロゴ */
+  #logo-sp { /* [cite: 5] */
+    margin: 80px 0px 30px 20px; /* [cite: 5] */
+  }
+
+  /* ナビゲーションリンクの装飾 */
+  #nav-sp a { /* [cite: 5] */
+    display: block; /* [cite: 5] */
+  }
+
+  #nav-sp a:link { /* [cite: 5] */
+    color: #ffffff; /* [cite: 5] */
+  }
+
+  #nav-sp a:visited { /* [cite: 5] */
+    color: #ffffff; /* [cite: 5] */
+  }
+
+  #nav-sp a:hover { /* [cite: 5] */
+    color: #ffffff; /* [cite: 5] */
+    text-decoration: underline; /* [cite: 5] */
+  }
+
+  #nav-sp a:active { /* [cite: 5] */
+    color: #ffffff; /* [cite: 5] */
+  }
+
+  #nav-sp .menu { /* [cite: 5] */
+    text-decoration: none; /* [cite: 5] */
+    display: block; /* [cite: 5] */
+    margin: 0px 20px; /* [cite: 5] */
+    height: 44px; /* [cite: 5] */
+    font-size: 16px; /* [cite: 5] */
+    background-image: url("images/arrow.png"); /* [cite: 5] */
+    background-repeat: no-repeat; /* [cite: 5] */
+    background-position: right top; /* [cite: 5] */
+  }
+}
